@@ -10,15 +10,15 @@ public class RunnerClass {
 
     @RunWith(Cucumber.class)
     @CucumberOptions(
-            plugin   = {"html:target/cucumber-report.html",
-                    "json:target/cucumber.json",
-                    "rerun:target/rerun.txt"
-            },
+         //   plugin   = {"html:target/cucumber-report.html",
+          //          "json:target/cucumber.json",
+         //           "rerun:target/rerun.txt"
+         //   },
             features = "src/test/resources/features",      //always starts from the 'src'
             glue     = "com/briteERP/stepDefinitions",   //always starts from the 'com' AND //HOOKS RUNNING BY THE GLUE
-            dryRun   = true,
-            tags     = "@addNote",
-            publish = true
+            dryRun   = false,
+            tags     = ""
+       //     publish = true
 
     )
 
@@ -27,3 +27,5 @@ public class RunnerClass {
 
     }
 }
+
+//Hello, Boris
