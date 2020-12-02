@@ -15,7 +15,7 @@ public class ConfigurationReader {
         try {
             //#2- We get the path and pass it into FileInputStream, to open the file
             // IT IS a begining point!!!!!
-            FileInputStream file = new FileInputStream("configurations.properties");
+            FileInputStream file = new FileInputStream("configuration.properties");
             //#3- We load the opened file into properties object
             properties.load(file);
             //#5- close the file
