@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 
         features = "src/test/resources/features",      //always starts from the 'src'
         glue     = "com/vytruck/stepDefenitions",   //always starts from the 'com' AND //HOOKS RUNNING BY THE GLUE
-        dryRun   = false,
+        dryRun   = true,
         tags     = ""
         //publish = false
 
