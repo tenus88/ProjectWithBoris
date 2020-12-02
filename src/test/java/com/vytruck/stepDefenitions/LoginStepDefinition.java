@@ -17,12 +17,10 @@ public class LoginStepDefinition {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
 
-
     @When("I user enters valid credentials")
-    public void i_user_enters_valid_credentials() {
+    public void i_user_enters_valid_credentials()  {
         loginPage.login();
     }
-
 
     @Then("user should be able to get main page")
     public void user_should_be_able_to_get_main_page() {
