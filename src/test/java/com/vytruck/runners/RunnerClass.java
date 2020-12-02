@@ -30,4 +30,4 @@ public class RunnerClass {
 
 //Hello, Boris!
 
-// Andrei nigga
+// Andrei nigga chudo
