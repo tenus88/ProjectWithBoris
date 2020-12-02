@@ -1,5 +1,5 @@
 package com.vytruck.pages;
 
-public class FirstPage {
+public class LoginPage {
     //Hello
 }
