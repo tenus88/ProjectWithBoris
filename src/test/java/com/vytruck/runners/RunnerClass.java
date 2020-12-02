@@ -15,9 +15,9 @@ public class RunnerClass {
          //           "rerun:target/rerun.txt"
          //   },
             features = "src/test/resources/features",      //always starts from the 'src'
-            glue     = "com/briteERP/stepDefinitions",   //always starts from the 'com' AND //HOOKS RUNNING BY THE GLUE
-            dryRun   = false,
-            tags     = ""
+            glue     = "com/vytruck/stepDefenitions",   //always starts from the 'com' AND //HOOKS RUNNING BY THE GLUE
+            dryRun   = true,
+            tags     = "@login"
        //     publish = true
 
     )
@@ -27,6 +27,7 @@ public class RunnerClass {
 
     }
 }
+
 
 //Hello, Boris!
 
