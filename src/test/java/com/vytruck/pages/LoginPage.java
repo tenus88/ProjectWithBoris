@@ -34,6 +34,27 @@ public class LoginPage {
         password.sendKeys(ConfigurationReader.getProperty("password"));
         loginButton.click();
     }
+    public void login(String role) {
+
+        String usernameValue ="";
+        String passowrdValue = ConfigurationReader.getProperty("password");
+
+        if (role.equalsIgnoreCase("sales manager")) {
+            usernameValue = ConfigurationReader.getProperty("salesmanager.username");
+        } else if (role.equalsIgnoreCase("driver")) {
+            usernameValue = ConfigurationReader.getProperty("driver.username");
+        } else {
+            usernameValue = ConfigurationReader.getProperty("storemanager.username");
+        }
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        userName.sendKeys(usernameValue);
+        password.sendKeys(passowrdValue, Keys.ENTER);
+
+    }
 
 
     public void wronglogin() {

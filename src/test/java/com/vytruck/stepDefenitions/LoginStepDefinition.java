@@ -53,9 +53,20 @@ public class LoginStepDefinition {
 
 
     }
+    @When("user logs in as a {string}")
+    public void user_logs_in_as_a(String string) {
+        loginPage.login(string);
+
+    }
 
 
+    @Then("user should see {string} page")
+    public void userShouldSeePage(String string) {
+        String actual = Driver.getDriver().getTitle().trim();
+        Assert.assertEquals("Page title is not correct!", string, actual);
 
+
+    }
 }
 
 
