@@ -30,4 +30,33 @@ public class LoginStepDefinition {
 
         Assert.assertEquals(expected,actual);
     }
+
+
+    //============================================================================
+
+
+
+    @When("user logs in with wrong password")
+    public void userLogsInWithWrongPassword() {
+        loginPage.wronglogin();
+    }
+
+
+    @Then("user verifies that he used wrong credentials and get message is displayed")
+    public void userVerifiesThatHeUsedWrongCredentialsAndGetMessageIsDisplayed() {
+
+        String expected = "Invalid user name or password.";
+        String actual = loginPage.alertMessage.getText();
+
+        Assert.assertEquals(expected,actual);
+
+
+
+    }
+
+
+
 }
+
+
+

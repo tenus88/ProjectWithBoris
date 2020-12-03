@@ -18,17 +18,28 @@ public class LoginPage {
     @FindBy(xpath = "//input[@type='text']")
     private WebElement userName;
 
-    @FindBy(id="prependedInput2")
-    private  WebElement password;
+    @FindBy(id = "prependedInput2")
+    private WebElement password;
 
     @FindBy(id = "_submit")
     private WebElement loginButton;
 
+    @FindBy(xpath = "//div[@class='alert alert-error']")
+    public WebElement alertMessage;
 
-    public void login()  {
+
+    public void login() {
 
         userName.sendKeys(ConfigurationReader.getProperty("storemanagerUN"));
         password.sendKeys(ConfigurationReader.getProperty("password"));
+        loginButton.click();
+    }
+
+
+    public void wronglogin() {
+
+        userName.sendKeys(ConfigurationReader.getProperty("storemanagerUN"));
+        password.sendKeys(ConfigurationReader.getProperty("wrongPassword"));
         loginButton.click();
     }
 }
